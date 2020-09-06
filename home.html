@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/all.css" rel="stylesheet">
+    <link href="/css/all.min.css" rel="stylesheet">
     <title>Alvaro Castro Cid</title>
 </head>
 <body>
+    
     <div class='menu-container'>
         <div class='menu'>
-          <div class='About'>Home</div>
+          <div class='home'>Home</div>
 
           <div class='links'>
-          <div class='gitHub'>Github</div>
-          <div class='linkedIn'>LinkedIn</div>
-          <div class='email'>Email</div>
+          <div class='gitHub'><i id = "icon" class="fab fa-github-square"></i></div>
+          <div class='linkedIn'><i id = "icon" class="fab fa-linkedin"></i></div>
+          <div class='email'><i id = "icon" class="fas fa-envelope-square"></i></div>
           </div>
         </div>
       </div>
@@ -84,16 +85,18 @@
         display: flex;
         justify-content: space-between;
         font-family:'Courier New', Courier, monospace;
-        font-size: 20px;
+        font-size: 21px;
         font-weight: 550;
+        
     }
 
-    .About:hover {
-        font-size: 18px;
+    .home:hover,
+    #bolt:hover {
+        font-size: 19px;
         cursor: pointer;
 
     }
-
+    
     .links {
         border: 1px solid #fff;
         display: flex;
@@ -106,6 +109,15 @@
 
     .email {
         margin-left: 20px;
+    }
+
+    #icon {
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    #icon:hover {
+        font-size: 18px;
     }
 
     .header-container {
