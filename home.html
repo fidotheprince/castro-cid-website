@@ -9,15 +9,152 @@
 <body>
     <div class='menu-container'>
         <div class='menu'>
-          <div class='About'>About</div>
-          <div class='GitHub'>Github</div>
-          <div class='LinkedIn'>LinkedIn</div>
-          <div class='Email'>Email</div>
+          <div class='About'>Home</div>
+
+          <div class='links'>
+          <div class='gitHub'>Github</div>
+          <div class='linkedIn'>LinkedIn</div>
+          <div class='email'>Email</div>
+          </div>
         </div>
       </div>
+
+      <div class='header-container'>
+        <div class='header'>
+          <div class='logo'>ALVARO | CREATE</div>
+        </div>
+      </div>
+
+      <div class='photo-grid-container'>
+        <div class='photo-grid'>
+          <div class='photo-grid-item first-item'>
+            <img src='images/one.svg'/>
+          </div>
+          <div class='photo-grid-item'>
+            <img src='images/two.svg'/>
+          </div>
+          <div class='photo-grid-item'>
+            <img src='images/three.svg'/>
+          </div>
+          <div class='photo-grid-item'>
+              Description
+          </div>
+          <div class='photo-grid-item last-item'>
+              Description
+          </div>
+          <div class='photo-grid-item last-item'>
+              Description
+          </div>
+          
+        </div>
+    </div>
+
+ 
+
+
+    <!-- manipulate later if desired -->
+    <div class='footer'>
+        <div class='footer-item footer-one'></div>
+        <div class='footer-item footer-two'></div>
+        <div class='footer-item footer-three'></div>
+    </div>
+      
+
 </body>
 </html>
 
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .menu-container {
+        color: #fff;
+        background-color: #004259;
+        padding: 20px 0;
+        display: flex;
+        justify-content:center;
+    }
+
+    .menu {
+        border: 1px solid #fff;
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-weight: 550;
+    }
+
+    .About:hover {
+        font-size: 18px;
+        cursor: pointer;
+
+    }
+
+    .links {
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .linkedIn {
+        margin-left: 20px;
+    }
+
+    .email {
+        margin-left: 20px;
+    }
+
+    .header-container {
+         color: #5995DA;
+         background-color: #D6E9FE;
+         display: flex;
+         justify-content: center;
+    }
+
+    .header {
+        width: 900px; 
+        height: 175px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        border: 1px solid #5995DA;
+
+        font-size: 75px;
+        color: #fff;
+        font-weight: 75px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .photo-grid-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo-grid {
+        width: 900px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+       
+    }
+
+    .photo-grid-item {
+        border: 1px solid white;
+        background: darkcyan;
+        width: 300px;
+        height: 300px;
+    }
+
+ 
+    
+
+
 
 </style>
