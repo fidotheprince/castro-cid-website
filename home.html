@@ -10,7 +10,7 @@
     
     <div class='menu-container'>
         <div class='menu'>
-          <div class='home'>Home</div>
+          <div class='home'><i class="fas fa-home"></i> Home</div>
 
           <div class='links'>
           <div class='gitHub'><i id = "icon" class="fab fa-github-square"></i></div>
@@ -22,41 +22,59 @@
 
       <div class='header-container'>
         <div class='header'>
-          <div class='logo'>ALVARO | CREATE</div>
+          <div class='logoOne'>Alvaro</i></div>
+          <div class='logoTwo'>Software Developer</div>
         </div>
       </div>
 
-      <div class='photo-grid-container'>
-        <div class='photo-grid'>
+      <div class='photo-grid-container'> 
           <div class='photo-grid-item first-item'>
-            <img src='images/one.svg'/>
+                <!--consistency in naming-->
+                <div id="project-header" class="item-in-item">Restaurant List App</div>
+                <div id="list-gif" class="item-in-item"></div>
+                <!--add links to code and demo or app-->
+                <div id="project-footer" class="item-in-item">
+                    <div class="project-opts"><i class="fas fa-project-diagram"></i> About</div>
+                    <div class="project-opts"><i class="fas fa-play"></i> Demo</div>
+                    <div class="project-opts"><i class="fas fa-code"></i> Code</div>
+                </div>
           </div>
-          <div class='photo-grid-item'>
-            <img src='images/two.svg'/>
+          <div class='photo-grid-item second-item'>
+                <div id="project-header" class="item-in-item">Hangman App</div>
+                <div id="hangman-gif" class="item-in-item"></div>
+                <div id="project-footer" class="item-in-item">
+                    <div class="project-opts"><i class="fas fa-project-diagram"></i> About</div>
+                    <div class="project-opts"><i class="fas fa-play"></i> Play</div>
+                    <div class="project-opts"><i class="fas fa-code"></i>  Code</div>
+                </div>
           </div>
-          <div class='photo-grid-item'>
-            <img src='images/three.svg'/>
-          </div>
-          <div class='photo-grid-item'>
-              Description
-          </div>
-          <div class='photo-grid-item last-item'>
-              Description
-          </div>
-          <div class='photo-grid-item last-item'>
-              Description
-          </div>
+            <div class='photo-grid-item third-item'>
+                <div id="project-header" class="item-in-item">Calorie Counting App</div>
+                <div id= "calorie-gif" class="item-in-item"></div>
+                <div id="project-footer" class="item-in-item">
+                    <div class="project-opts"><i class="fas fa-project-diagram"></i> About</div>
+                    <div class="project-opts"><i class="fas fa-play"></i> Play</div>
+                    <div class="project-opts"><i class="fas fa-code"></i> Code</div>
+                </div>
+          </div> 
+          
+
           
         </div>
     </div>
 
- 
-
-
     <!-- manipulate later if desired -->
     <div class='footer'>
         <div class='footer-item footer-one'></div>
-        <div class='footer-item footer-two'></div>
+        <div class='footer-item footer-two'>
+            <div>Developed by Alvaro Castro Cid</div>
+            <div> let tech = HTML5 + CSS + JavaScript;</div>
+            <div class="footer-links">
+                <div><i class="fab fa-github-square"></i></div>
+                <div><i class="fab fa-linkedin"></i></div>
+                <div><i class="fas fa-envelope-square"></i></div>
+            </div>
+        </div>
         <div class='footer-item footer-three'></div>
     </div>
       
@@ -64,7 +82,9 @@
 </body>
 </html>
 
+<!-- browser styles then mobile = default -->
 <style>
+
     * {
         margin: 0;
         padding: 0;
@@ -74,31 +94,35 @@
     .menu-container {
         color: #fff;
         background-color: #004259;
+        border-bottom: 1px solid #00161e; 
         padding: 20px 0;
         display: flex;
-        justify-content:center;
+        justify-content: center;
     }
 
     .menu {
-        border: 1px solid #fff;
+        /*container outline here*/
         width: 900px;
         display: flex;
         justify-content: space-between;
         font-family:'Courier New', Courier, monospace;
         font-size: 21px;
         font-weight: 550;
-        
     }
 
-    .home:hover,
-    #bolt:hover {
-        font-size: 19px;
+    .home {
+      
+    }
+
+    .home:hover {
+        color: #1afdff;
         cursor: pointer;
+        
 
     }
     
     .links {
-        border: 1px solid #fff;
+        /*contianer outline here*/
         display: flex;
         justify-content: flex-end;
     }
@@ -118,51 +142,158 @@
 
     #icon:hover {
         font-size: 18px;
+        color: #1afdff;
+        
     }
 
     .header-container {
-         color: #5995DA;
-         background-color: #D6E9FE;
-         display: flex;
+         /*container outline here*/
+         color: #00161e;
+         display: flex;   
          justify-content: center;
     }
 
     .header {
         width: 900px; 
-        height: 175px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 200px;
     }
 
-    .logo {
-        border: 1px solid #5995DA;
-
-        font-size: 75px;
-        color: #fff;
-        font-weight: 75px;
-        font-family: 'Courier New', Courier, monospace;
+    .logoOne, .logoTwo {
+       
+        text-align: center; 
+        font-size: 50px;
+        font-family:monospace;
     }
+
+    .logoOne {
+        margin-top: 51px;
+    }
+
 
     .photo-grid-container {
+        
+        padding-top: 50px;
+        padding-bottom: 50px;
         display: flex;
-        justify-content: center;
+        justify-content:space-evenly;
     }
 
     .photo-grid {
-        width: 900px;
+
+        width: 100%;
         display: flex;
-        justify-content: flex-start;
         flex-wrap: wrap;
-       
     }
 
     .photo-grid-item {
-        border: 1px solid white;
-        background: darkcyan;
-        width: 300px;
-        height: 300px;
+        background-color: #f2fcff;
+        width: 325px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+
     }
+
+ 
+
+    #project-header {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        background:  #f2fcff;
+        text-align: center;
+        width: 100%;
+        height: 75px;
+        padding-top: 20px;
+        color: #00161e;
+        border-bottom: 5px solid #fff;
+    }
+
+    
+
+    #project-footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        color: #004259;
+        text-align: center;
+        width: 100%;
+        border-top: 5px solid white;
+        background-color: #f2fcff;
+        height: 100px;
+        
+    }
+
+    .project-opts {
+        border: 2px solid  #f2fcff;
+        border-radius: 4px;
+        padding: 8px;
+        padding-top: 9px;
+    }
+
+    .project-opts:hover {
+        color: #1afdff;
+        border: 2px solid  #1afdff;
+        border-radius: 4px;
+        padding: 8px;
+        padding-top: 9px;
+        cursor: pointer;
+    }
+
+    .first-item {
+        margin-right: 5px;
+    }
+
+    .second-item {
+        margin-right: 5px;
+    }
+
+    img {
+        width: 100%;
+        height: 255px;
+        
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-item {
+        background:  #00161e;
+        height: 260px;
+        flex: 1;
+    }
+
+ 
+    .footer-two {
+        border-right: 5px solid #fff;
+        border-left:  5px solid #fff;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 12px;
+    }
+
+    .footer-one,
+    .footer-three {
+        background-color: #00161e;
+        flex: initial;
+        width: 100px;
+    }
+
+    .footer-links {
+        border: 1px solid white;
+        display: flex;
+        justify-content: space-between;
+    }
+
 
  
     
