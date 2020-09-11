@@ -67,12 +67,16 @@
     <div class='footer'>
         <div class='footer-item footer-one'></div>
         <div class='footer-item footer-two'>
-            <div>Developed by Alvaro Castro Cid</div>
-            <div> let tech = HTML5 + CSS + JavaScript;</div>
+            <!-- have the bolt and name direct you to a personal about page -->
+            <div><i class="fas fa-bolt"></i> <span id="signature">Developed by</span> Alvaro</div>
+            <div> <span id="signature">let</span> tech = <i class="fab fa-html5"></i> + <i class="fab fa-css3-alt"></i> + <i class="fab fa-js-square"></i>;</div>
             <div class="footer-links">
-                <div><i class="fab fa-github-square"></i></div>
-                <div><i class="fab fa-linkedin"></i></div>
-                <div><i class="fas fa-envelope-square"></i></div>
+                <div class="footer-link"><i class="fab fa-github-square"></i></div>
+                <div class="footer-link"><i class="fab fa-linkedin"></i></div>
+                <div class="footer-link"><i class="fas fa-envelope-square"></i></div>
+                <!--I want the word resume to only show on hover-->
+                <!--I want to have a pdf of my resume loaded w/ each page-->
+                <div class="footer-link"><i class="fas fa-file-pdf"></i> <span id="signature">Resume</span></div>
             </div>
         </div>
         <div class='footer-item footer-three'></div>
@@ -278,7 +282,7 @@
         justify-content: space-evenly;
         align-items: center;
         font-family:'Courier New', Courier, monospace;
-        font-size: 12px;
+        font-size: 17px;
     }
 
     .footer-one,
@@ -289,15 +293,34 @@
     }
 
     .footer-links {
-        border: 1px solid white;
         display: flex;
-        justify-content: space-between;
+    }
+    .footer-link {
+        font-size: 17px;
+        padding: 13px;
     }
 
+    #signature {
+        color: #004259;
+    }
 
- 
-    
+    .fa-html5:hover {
+        color: orange;
+    }
 
+    .fa-css3-alt:hover {
+        color: #370dff;
+    }
 
+    .fa-js-square:hover {
+        color: #ffd90d;
+    }
 
+    .fa-bolt:hover{
+        color: #ffd90d;
+    }
 </style>
+
+<script>
+    <script src="logic.js"></script>
+</script>
