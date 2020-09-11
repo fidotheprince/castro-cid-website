@@ -8,10 +8,9 @@
 </head>
 <body>
     
-    <div class='menu-container'>
+    <div id='menu-container'>
         <div class='menu'>
           <div class='home'><i class="fas fa-home"></i> Home</div>
-
           <div class='links'>
           <div class='gitHub'><i id = "icon" class="fab fa-github-square"></i></div>
           <div class='linkedIn'><i id = "icon" class="fab fa-linkedin"></i></div>
@@ -58,8 +57,6 @@
                 </div>
           </div> 
           
-
-          
         </div>
     </div>
 
@@ -95,13 +92,18 @@
         box-sizing: border-box;
     }
 
-    .menu-container {
+    #menu-container {
         color: #fff;
         background-color: #004259;
         border-bottom: 1px solid #00161e; 
         padding: 20px 0;
         display: flex;
         justify-content: center;
+    }
+
+    .sticky + .header-container {
+
+        padding-top: 60px;
     }
 
     .menu {
@@ -113,6 +115,13 @@
         font-size: 21px;
         font-weight: 550;
     }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    /*add additional stylings for sticky menu*/
 
     .home {
       
@@ -279,6 +288,7 @@
         border-left:  5px solid #fff;
         color: white;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
         font-family:'Courier New', Courier, monospace;
@@ -321,6 +331,4 @@
     }
 </style>
 
-<script>
-    <script src="logic.js"></script>
-</script>
+<script src="logic.js"></script>
