@@ -71,7 +71,7 @@
                 <div class="footer-link"><a href="https://www.linkedin.com/in/alvaro-castro-cid-1160081a5/"><i class="fab fa-linkedin"></i></a></div>
                 <div class="footer-link"><a href="mailto: alvarocastrocid1@gmail.com"><i class="fas fa-envelope-square"></i></a></div>
                 <!--I want to have a pdf of my resume loaded w/ each page-->
-                <div class="footer-link"><a href=""><span id="signature">Resume</span> <i class="fas fa-file-pdf"></i> </a></div>
+                <div class="footer-link"><a href=""><i class="fas fa-file-pdf"></i> </a></div>
             </div>
         </div>
         <div class='footer-item footer-three'></div>
@@ -192,6 +192,7 @@
         padding-top: 50px;
         padding-bottom: 50px;
         display: flex;
+        flex-wrap: wrap;
         justify-content:space-evenly;
     }
 
@@ -211,7 +212,6 @@
         justify-content: center;
         align-items: center;
         justify-content: space-between;
-
     }
 
  
@@ -278,7 +278,7 @@
     .footer {
         display: flex;
         justify-content: space-between;
-        margin-top: 75px;
+      
     }
 
     .footer-item {
@@ -304,7 +304,7 @@
     .footer-three {
         background-color: #00161e;
         flex: initial;
-        width: 100px;
+        width: 35px;
     }
 
     .footer-links {
@@ -335,15 +335,40 @@
         color: #ffd90d;
     }
 
-    @media only screen and (max-width: 1135px) {
-    body {
+    @media only screen and (max-width: 1000px) {
+        body {
+        
+        }
+
+        .menu {
+            justify-content: space-evenly;
+        }
+
+        .first-item, .second-item {
+            margin-bottom: 10px;
+        }
+        
     }
 
-    .menu {
-        justify-content: space-evenly
-    }
+    @media only screen and (max-width: 550px) {
+       
+        .logoOne, .logoTwo {
+            font-size: 50px;
+        }
+
+        .third-item {
+            margin-right: 5px;
+        }
 
     }
+
+        
+
+
+
+  
+
+    
 
 </style>
 
