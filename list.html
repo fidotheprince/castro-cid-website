@@ -19,13 +19,6 @@
         </div>
       </div>
 
-      <div class='header-container'>
-        <div class='header'>
-          <div class='logoOne'>Alvaro</i></div>
-          <div class='logoTwo'>Software Developer</div>
-        </div>
-      </div>
-
       <div class='photo-grid-container'> 
         <div class='photo-grid-item first-item'>
               <!--consistency in naming-->
@@ -59,10 +52,89 @@
 
 </body>
 
+<script src="logic.js"></script>
+
 <style>
     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
+
+    a {
+    text-decoration: inherit;
+    color: inherit;
+    }
+
+    #menu-container {
+    color: #fff;
+    background-color: #004259;
+    border-bottom: 1px solid #00161e; 
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    }
+
+    .sticky + .header-container {
+        padding-top: 60px;
+    }
+
+    .menu {
+    /*container outline here*/
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 21px;
+    font-weight: 550;
+    }
+
+    .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+
+    .home:hover {
+    color: #1afdff;
+    cursor: pointer;
+    }
+
+    .links {
+    /*contianer outline here*/
+    display: flex;
+    justify-content: flex-end;
+    }
+
+    .linkedIn {
+    margin-left: 20px;
+    }
+
+    .email {
+        margin-left: 20px;
+    }
+
+    #icon {
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    #icon:hover {
+        font-size: 18px;
+        color: #1afdff;
+        
+    }
+
+    .photo-grid-container {
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+
+    }
+
+
+
 </style>
