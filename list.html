@@ -29,10 +29,24 @@
         <div class='photo-grid-item first-item'>
               <!--consistency in naming-->
               <div id="project-header" class="item-in-item">Restaurant List App</div>
-              <div id="list-gif" class="item-in-item"></div>
+              <div class="item-in-item">
+                
+                <div id="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <br/><br/>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </div>
+
+              </div>
               <!--add links to code and demo or app-->
               <div id="project-footer" class="item-in-item">
-                  <a href="list.html"><div class="project-opts"><i class="fas fa-project-diagram"></i> About</div></a> 
+                  <a href="home.html"><div class="project-opts"><i class="fas fa-home"></i></div></a> 
                   <a href="images/listapp.gif"><div class="project-opts"><i class="fas fa-play"></i> Demo</div></a>
                   <a href="https://github.com/fidotheprince/restaurant-list-app"><div class="project-opts"><i class="fas fa-code"></i> Code</div></a>
               </div>
@@ -135,6 +149,7 @@
     
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
@@ -150,8 +165,8 @@
 
     .photo-grid-item {
     background-color: #f2fcff;
-    width: 325px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,14 +176,20 @@
 
     #project-header {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 25px;
     background:  #f2fcff;
     text-align: center;
     width: 100%;
     height: 75px;
     padding-top: 20px;
+    padding-bottom: 20px;
     color: #00161e;
     border-bottom: 5px solid #fff;
+    }
+
+    #paragraph {
+        padding: 25px;
+        font-size: 16px;
     }
 
 
@@ -187,7 +208,7 @@
         
     }
 
-        .project-opts {
+    .project-opts {
         border: 2px solid  #f2fcff;
         border-radius: 4px;
         padding: 8px;
@@ -205,77 +226,77 @@
 
     .first-item {
     margin-right: 5px;
-}
+    }
 
-.second-item {
-    margin-right: 5px;
-}
+    .second-item {
+        margin-right: 5px;
+    }
 
-img {
-    width: 100%;
-    height: 255px;
+    img {
+        width: 100%;
+        height: 255px;
+        
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
     
-}
+    }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-  
-}
-
-.footer-item {
-    background:  #00161e;
-    height: 260px;
-    flex: 1;
-}
+    .footer-item {
+        background:  #00161e;
+        height: 260px;
+        flex: 1;
+    }
 
 
-.footer-two {
-    border-right: 5px solid #fff;
-    border-left:  5px solid #fff;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 17px;
-}
+    .footer-two {
+        border-right: 5px solid #fff;
+        border-left:  5px solid #fff;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 17px;
+    }
 
-.footer-one,
-.footer-three {
-    background-color: #00161e;
-    flex: initial;
-    width: 35px;
-}
+    .footer-one,
+    .footer-three {
+        background-color: #00161e;
+        flex: initial;
+        width: 35px;
+    }
 
-.footer-links {
-    display: flex;
-}
-.footer-link {
-    font-size: 17px;
-    padding: 13px;
-}
+    .footer-links {
+        display: flex;
+    }
+    .footer-link {
+        font-size: 17px;
+        padding: 13px;
+    }
 
-#signature {
-    color: #004259;
-}
+    #signature {
+        color: #004259;
+    }
 
-.fa-html5:hover {
-    color: orange;
-}
+    .fa-html5:hover {
+        color: orange;
+    }
 
-.fa-css3-alt:hover {
-    color: #370dff;
-}
+    .fa-css3-alt:hover {
+        color: #370dff;
+    }
 
-.fa-js-square:hover {
-    color: #ffd90d;
-}
+    .fa-js-square:hover {
+        color: #ffd90d;
+    }
 
-.fa-bolt:hover{
-    color: #ffd90d;
-}
+    .fa-bolt:hover{
+        color: #ffd90d;
+    }
 
 @media only screen and (max-width: 1000px) {
     body {
