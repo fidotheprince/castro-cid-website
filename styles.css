@@ -117,7 +117,8 @@ a {
 }
 
 .photo-grid-item {
-    background-color: #f2fcff;
+    /*change background color*/
+    background-color: #fff;
     width: 325px;
     height: 400px;
     display: flex;
@@ -140,8 +141,6 @@ a {
     color: #00161e;
     border-bottom: 5px solid #fff;
 }
-
-
 
 #project-footer {
     display: flex;
@@ -183,8 +182,9 @@ a {
 }
 
 img {
-    width: 100%;
-    height: 255px;
+    padding-top: 4px;
+    width: 215px;
+    height: 215px;
     
 }
 
