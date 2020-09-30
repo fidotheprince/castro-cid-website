@@ -5,7 +5,7 @@
 }
 
 .headerPic {
-    width: fixed;
+    
 }
 
 a {
@@ -187,9 +187,7 @@ a {
 
 img {
     padding-top: 4px;
-    width: fixed;
     height: 215px;
-    
 }
 
 .footer {
