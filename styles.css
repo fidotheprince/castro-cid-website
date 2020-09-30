@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.headerPic {
-    
-}
-
 a {
     text-decoration: inherit;
     color: inherit;
@@ -80,18 +76,6 @@ a {
     
 }
 
-.header-container {
-     /*container outline here*/
-     color: #00161e;
-     display: flex;   
-     justify-content: center;
-}
-
-.header {
-    width: 900px; 
-    height: 200px;
-}
-
 .logoOne, .logoTwo {
    
     text-align: center; 
@@ -101,6 +85,17 @@ a {
 
 .logoOne {
     margin-top: 51px;
+}
+
+.header-container {
+
+    background-image: url("images/bgImageFive.svg");
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 15px;
+
 }
 
 
@@ -114,7 +109,6 @@ a {
 }
 
 .photo-grid {
-
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -141,7 +135,7 @@ a {
     text-align: center;
     width: 100%;
     height: 75px;
-    padding-top: 20px;
+    padding-top: 25px;
     color: #00161e;
     border-bottom: 5px solid #fff;
 }
@@ -193,7 +187,6 @@ img {
 .footer {
     display: flex;
     justify-content: space-between;
-  
 }
 
 .footer-item {
