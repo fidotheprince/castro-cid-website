@@ -32,15 +32,20 @@
               <div class="item-in-item">
                 
                 <div id="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    The application was done under my apprenticeship for a Senior Developer specializing in the .NET Framework. 
                 <br/><br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                Its basic concept is to leverage .NET, specifically Active Server Pages (ASP) to dynamically render changes to a directory of restaurants on a browser.
+                A user when encountering a new restaurant can add, edit, or delete the entity as well as include a short description. 
+                <br/><br/>
+                User input is stored through SQL Server, a relational database management system (RDBMS) on the back-end. 
+                Accordingly, I abstracted the need for hard-written queries into the database by using an Object Relational Mapper (ORM) Entity Framework and Language Integrated Query (LINQ). 
+                In short, these components allowed me to use C# an Object Oriented Programming Language (OOP) to work directly with the database.
+                <br/><br/>
+                The Model View Controller (MVC) design pattern was used to construct relevant data models. These models were templated and viewable to the user through Razor markup. 
+                In regard to networking, HTTP requests were handled by routing URL file paths to specified controllers. 
+                <br/><br/>
+                Ideally, I’d like the application to evolve in scope. I would like it to handle a more robust input of data.
+                This would allow me to work with data relationships like, One-to-One, One-to-Many, or Many-to-Many. The intent being to organize said data in a logically sound manner, while preserving it’s integrity and simplifying accessibility. 
                 </div>
                 <div id="paragraph-two"><i class="fas fa-tools"></i> Stack</div>
                 <div id="paragraph-three">
@@ -185,7 +190,7 @@
     .photo-grid-item {
         background-color: #f2fcff;
         width: 500px;
-        height: 800px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -241,9 +246,9 @@
         width: 100%;
         border-top: 5px solid white;
         background-color: #f2fcff;
-        height: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+         /*height for bottom nav bar on photo grid item*/
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin-bottom: 15px;
         
     }
@@ -322,15 +327,15 @@
         color: #004259;
     }
 
-    .fa-html5:hover {
+    .fa-html5 {
         color: orange;
     }
 
-    .fa-css3-alt:hover {
+    .fa-css3-alt {
         color: #370dff;
     }
 
-    .fa-js-square:hover {
+    .fa-js-square {
         color: #ffd90d;
     }
 
