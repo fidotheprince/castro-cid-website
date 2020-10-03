@@ -32,15 +32,22 @@
               <div class="item-in-item">
                 
                 <div id="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                After completing the restaurant list project, I kept learning from my mentor and watched him and another Senior Developer create a Command Line Interface (CLI) application of Hangman with Ruby. 
+                The two seasoned Developers went from knowing zero about Ruby to programming something functional within an amalgamation of less than 48 hours. 
+                During this process I asked multiple questions, contributed valuable input, and most importantly, took the time to understand the logical concepts applied by the duo. 
                 <br/><br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                Upon finishing the application, I had a deep desire to elevate what I had learned to a new level.
+                Instead of a CLI, I wanted a single-page Web Application. Hangmantwosix <a  id ="para-link" href="https://www.hangmantwosix.com/">(take a peek)</a> is a result of this inspiration.
+                <br/><br/>
+                The JavaScript (JS) for the application is written to evaluate the current state of the game and send that given state to be visually rendered for the user. 
+                To do this, the initial string data type representing the hidden word is made into an array data structure. 
+                This allows JS to iterate through each letter item and assess whether it matches a user guess or not. 
+                Accordingly, counts are kept for correct and incorrect user guesses. These counts help assess when the game has reached an end state. Moreover, each guess changes a key:value pairing within an object representing the hidden word. 
+                The key in this case would be the letter and the value being a boolean data type. A letter's true or false value gives JS the information to know which letters to render visually (true) and which letters to hide (false). 
+                <br/><br/>
+                I think this application can improve by organizing it’s logic in a more efficient manner.  
+                I used my understanding of both Function Programming and Object Oriented Programming for it’s code. However, the consequence is that it lacks much needed structure. 
+                Future programs will be written by choosing one of these paradigms instead of straddling both. 
                 </div>
                 <div id="paragraph-two"><i class="fas fa-tools"></i> Stack</div>
                 <div id="paragraph-three">
@@ -177,7 +184,7 @@
     .photo-grid-item {
         background-color: #f2fcff;
         width: 500px;
-        height: 700px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -214,6 +221,10 @@
         font-family: 'Courier New', Courier, monospace;
     }
 
+    #para-link {
+        color: #1afdff;
+    }
+
     #paragraph-three {
         padding: 25px;
         font-size: 13px;
@@ -233,11 +244,10 @@
         width: 100%;
         border-top: 5px solid white;
         background-color: #f2fcff;
-        height: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+         /*height for bottom nav bar on photo grid item*/
+        padding-top: 25px;
+        padding-bottom: 25px;
         margin-bottom: 15px;
-        
     }
 
     .project-opts {
@@ -351,6 +361,8 @@
     .third-item {
         margin-right: 5px;
     }
+
+  
 
 }
 
