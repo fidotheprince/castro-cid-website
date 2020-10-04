@@ -227,19 +227,19 @@ img {
     color: #004259;
 }
 
-.fa-html5 {
+.fa-html5:hover {
     color: orange;
 }
 
-.fa-css3-alt {
+.fa-css3-alt:hover {
     color: #370dff;
 }
 
-.fa-js-square {
+.fa-js-square:hover {
     color: #ffd90d;
 }
 
-.fa-bolt:hover{
+.fa-bolt:hover {
     color: #ffd90d;
 }
 
