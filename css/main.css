@@ -128,6 +128,7 @@ a {
     height: 700px;
 }
 
+/* list.html, hangman.html, ccount.html*/
 .list {
     width: 500px;
     height: auto;
@@ -145,7 +146,7 @@ a {
     border-bottom: 5px solid #fff;
 }
 
-/* project header for page.html, list.html */
+/* project header for page.html, list.html, hangman.html */
 #project-header-page {
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
@@ -183,6 +184,10 @@ a {
     color: #00161e;
     font-family: 'Courier New', Courier, monospace;
 }
+/*link inside paragraph for hangman.html*/
+#para-link {
+    color: #1afdff;
+}
 
 /* add paragraph classes */
 
@@ -202,7 +207,7 @@ a {
 }
 
 /*account for diff in project footer */
-/*project footer for page.html, list.html*/
+/*project footer for page.html, list.html, hangman.html, ccounter.html*/
 
 #project-footer-page {
         display: flex;
