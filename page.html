@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link href="/css/all.min.css" rel="stylesheet">
     <title>Alvaro Castro Cid</title>
 </head>
@@ -26,9 +27,9 @@
       </div>
 
       <div class='photo-grid-container'> 
-        <div class='photo-grid-item first-item'>
+        <div class='page photo-grid-item first-item'>
               <!--consistency in naming-->
-              <div id="project-header" class="item-in-item"><i class="fas fa-bolt"></i> Alvaro's Porfolio <i class="fas fa-bolt"></i></div>
+              <div id="project-header-page" class="item-in-item"><i class="fas fa-bolt"></i> Alvaro's Porfolio <i class="fas fa-bolt"></i></div>
               <div class="item-in-item">
                 
                 <div id="paragraph">
@@ -48,7 +49,7 @@
 
               </div>
               <!--add links to code and demo or app-->
-              <div id="project-footer" class="item-in-item">
+              <div id="project-footer-page" class="item-in-item">
                   <a href="home.html"><div class="project-opts"><i class="fas fa-home"></i></div></a> 
                   <a href ="mailto: alvarocastrocid1@gmail.com"><div class='project-opts'><i class="far fa-envelope"></i> Connect</div></a>
                   <a href="https://github.com/fidotheprince/castro-cid-website"><div class="project-opts"><i class="fas fa-code"></i> Code</div></a>
@@ -62,12 +63,12 @@
             <div class='footer-item footer-two'>
       
                 <div><a href="page.html"></a> <span id="signature">Work with</span> <a id="name" href="mailto: alvarocastrocid1@gmail.com">Alvaro</a></div>
-                <div> <span id="signature">let</span> tech = <i class="fab fa-html5"></i> + <i class="fab fa-css3-alt"></i> + <i class="fab fa-js-square"></i>;</div>
+                <div> <span id="signature">let tech = </span><a href="https://www.w3schools.com/html/default.asp"><i class="fab fa-html5"></i></a> + <a href="https://www.w3schools.com/css/default.asp"><i class="fab fa-css3-alt"></i></a> + <a href="https://www.w3schools.com/Js/default.asp"><i class="fab fa-js-square"></i></a>;</div>
                 <div class="footer-links">
                     <div class="footer-link"><a href="https://github.com/fidotheprince"><i class="fab fa-github-square"></i></a></i></div>
                     <div class="footer-link"><a href="https://www.linkedin.com/in/alvaro-castro-cid-1160081a5/"><i class="fab fa-linkedin"></i></a></div>
                     <div class="footer-link"><a href="mailto: alvarocastrocid1@gmail.com"><i class="fas fa-envelope-square"></i></a></div>
-                    <div class="footer-link"><a href=""><i class="fas fa-file-pdf"></i> </a></div>
+                    <div class="footer-link"><a href="images/Resume-Alvaro.pdf">Resume </a></div>
                 </div>
             </div>
             <div class='footer-item footer-three'></div>
@@ -76,284 +77,3 @@
 </body>
 
 <script src="logic.js"></script>
-
-<style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-
-    a {
-    text-decoration: inherit;
-    color: inherit;
-    }
-
-    .header-container {
-       
-    }
-
-    #menu-container {
-        color: #fff;
-        background-color: #004259;
-        border-bottom: 1px solid #00161e; 
-        padding: 20px 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .sticky + .header-container {
-        padding-top: 60px;
-    }
-
-    .menu {
-        /*container outline here*/
-        width: 900px;
-        display: flex;
-        justify-content: space-between;
-        font-family:'Courier New', Courier, monospace;
-        font-size: 21px;
-        font-weight: 550;
-    }
-
-    .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-
-    .home:hover {
-        color: #1afdff;
-        cursor: pointer;
-    }
-
-    .links {
-    /*contianer outline here*/
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .linkedIn {
-        margin-left: 20px;
-    }
-
-    .email {
-        margin-left: 20px;
-    }
-
-    #icon {
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    #icon:hover {
-        font-size: 18px;
-        color: #1afdff;
-        
-    }
-
-    .photo-grid-container {
-    
-        padding-top: 50px;
-        padding-bottom: 50px;
-        margin-bottom: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-evenly;
-
-    }
-
-    .photo-grid {
-
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    .photo-grid-item {
-        background-color: #f2fcff;
-        width: 500px;
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #project-header {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 25px;
-        background:  #f2fcff;
-        text-align: center;
-        width: 100%;
-        height: 75px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: #00161e;
-        border-bottom: 5px solid #fff;
-    }
-
-    #paragraph {
-        padding: 25px;
-        font-size: 13px;
-        color: #00161e;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    #paragraph-two {
-        padding-left: 25px;
-        padding-top: 20px;
-        border-top: 2px solid #fff;
-        font-size: 16px;
-        color: #00161e;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    #paragraph-three {
-        padding: 25px;
-        font-size: 13px;
-        color: #00161e;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-
-    #project-footer {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 17px;
-        color: #004259;
-        text-align: center;
-        width: 100%;
-        border-top: 5px solid white;
-        background-color: #f2fcff;
-        height: 100px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 15px;
-        
-    }
-
-    .project-opts {
-        font-size: 17px;
-        border: 2px solid  #f2fcff;
-        border-radius: 4px;
-        padding: 8px;
-        padding-top: 9px;
-    }
-
-    .project-opts:hover {
-        color: #1afdff;
-        border: 2px solid  #1afdff;
-        border-radius: 4px;
-        padding: 8px;
-        padding-top: 9px;
-        cursor: pointer;
-    }
-
-    .first-item {
-        margin-right: 5px;
-    }
-
-    .second-item {
-        margin-right: 5px;
-    }
-
-    img {
-        width: 100%;
-        height: 255px;
-        
-    }
-
-    .footer {
-        display: flex;
-        justify-content: space-between;
-    
-    }
-
-    .footer-item {
-        background:  #00161e;
-        height: 260px;
-        flex: 1;
-    }
-
-
-    .footer-two {
-        border-right: 5px solid #fff;
-        border-left:  5px solid #fff;
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        font-family:'Courier New', Courier, monospace;
-        font-size: 17px;
-    }
-
-    .footer-one,
-    .footer-three {
-        background-color: #00161e;
-        flex: initial;
-        width: 20px;
-    }
-
-    .footer-links {
-        display: flex;
-    }
-    .footer-link {
-        font-size: 17px;
-        padding: 13px;
-    }
-
-    #signature {
-        color: #004259;
-    }
-
-    #name:hover {
-        color: #ffd90d;
-    }
-
-    .fa-html5 {
-        color: orange;
-    }
-
-    .fa-css3-alt {
-        color: #370dff;
-    }
-
-    .fa-js-square {
-        color: #ffd90d;
-    }
-
-    .fa-bolt:hover{
-    }
-
-@media only screen and (max-width: 1000px) {
-    body {
-    
-    }
-
-    .menu {
-        justify-content: space-evenly;
-    }
-
-    .first-item, .second-item {
-        margin-bottom: 10px;
-    }
-    
-}
-
-@media only screen and (max-width: 550px) {
-   
-
-    .third-item {
-        margin-right: 5px;
-    }
-
-}
-
-
-</style>
