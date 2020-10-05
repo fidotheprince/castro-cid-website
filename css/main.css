@@ -94,6 +94,7 @@ a {
 
 
 .photo-grid-container {
+    margin-top: 5px;
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 30px;
@@ -158,8 +159,6 @@ a {
     color: #00161e;
     border-bottom: 5px solid #fff;
 }
-
-/* mods to project-header for page*/
 
 #paragraph {
     padding: 25px;
