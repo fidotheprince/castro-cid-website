@@ -83,7 +83,7 @@ a {
 
 .header-container {
 
-    background-image: url("images/bgImageFive.svg");
+    background-image: url("/images/bgImageFive.svg");
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +94,6 @@ a {
 
 
 .photo-grid-container {
-    
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 30px;
@@ -225,6 +224,7 @@ a {
         margin-bottom: 15px;
 }
 
+
 .project-opts {
     border: 2px solid  #f2fcff;
     border-radius: 4px;
@@ -338,6 +338,12 @@ img {
     .third-item {
         margin-right: 5px;
     }
+
+    .photo-grid-container {
+        margin-left: 5px;
+    }
+
+    
 
 
 }
