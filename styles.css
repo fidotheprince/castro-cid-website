@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.headerPic {
+    
+}
+
 a {
     text-decoration: inherit;
     color: inherit;
@@ -19,6 +23,7 @@ a {
 }
 
 .sticky + .header-container {
+
     padding-top: 60px;
 }
 
@@ -39,10 +44,13 @@ a {
 }
 /*add additional stylings for sticky menu*/
 
+.home {
+  
+}
+
 .home:hover {
     color: #1afdff;
     cursor: pointer;
-    
 }
 
 .links {
@@ -70,6 +78,18 @@ a {
     
 }
 
+.header-container {
+     /*container outline here*/
+     color: #00161e;
+     display: flex;   
+     justify-content: center;
+}
+
+.header {
+    width: 900px; 
+    height: 200px;
+}
+
 .logoOne, .logoTwo {
    
     text-align: center; 
@@ -81,29 +101,18 @@ a {
     margin-top: 51px;
 }
 
-.header-container {
-
-    background-image: url("/images/bgImageFive.svg");
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 15px;
-
-}
-
 
 .photo-grid-container {
-    margin-top: 5px;
+    
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
 
 .photo-grid {
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -121,18 +130,7 @@ a {
     justify-content: space-between;
 }
 
-/* page.html, list.html, hangman.html, ccount.html photo-grid-item*/
 
-.page {
-    width: 500px;
-    height: 700px;
-}
-
-/* list.html, hangman.html, ccount.html*/
-.list {
-    width: 500px;
-    height: auto;
-}
 
 #project-header {
     font-family: 'Courier New', Courier, monospace;
@@ -141,87 +139,25 @@ a {
     text-align: center;
     width: 100%;
     height: 75px;
-    padding-top: 25px;
+    margin-top: 0;
     color: #00161e;
     border-bottom: 5px solid #fff;
 }
-
-/* project header for page.html, list.html, hangman.html */
-#project-header-page {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    background:  #f2fcff;
-    text-align: center;
-    width: 100%;
-    height: 75px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #00161e;
-    border-bottom: 5px solid #fff;
-}
-
-#paragraph {
-    padding: 25px;
-    font-size: 13px;
-    color: #00161e;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#paragraph-two {
-    padding-left: 25px;
-    padding-top: 20px;
-    border-top: 2px solid #fff;
-    font-size: 16px;
-    color: #00161e;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#paragraph-three {
-    padding: 25px;
-    font-size: 13px;
-    color: #00161e;
-    font-family: 'Courier New', Courier, monospace;
-}
-/*link inside paragraph for hangman.html*/
-#para-link {
-    color: #1afdff;
-}
-
-/* add paragraph classes */
 
 #project-footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
+    font-size: 14px;
     color: #004259;
     text-align: center;
     width: 100%;
     border-top: 5px solid white;
     background-color: #f2fcff;
     height: 100px;
+    
 }
-
-/*account for diff in project footer */
-/*project footer for page.html, list.html, hangman.html, ccounter.html*/
-
-#project-footer-page {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 18px;
-        color: #004259;
-        text-align: center;
-        width: 100%;
-        border-top: 5px solid white;
-        background-color: #f2fcff;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 15px;
-}
-
 
 .project-opts {
     border: 2px solid  #f2fcff;
@@ -251,11 +187,11 @@ img {
     padding-top: 4px;
     height: 215px;
 }
-/*diff in images*/
 
 .footer {
     display: flex;
     justify-content: space-between;
+  
 }
 
 .footer-item {
@@ -308,7 +244,7 @@ img {
     color: #ffd90d;
 }
 
-.fa-bolt:hover {
+.fa-bolt:hover{
     color: #ffd90d;
 }
 
@@ -324,7 +260,7 @@ img {
     .first-item, .second-item {
         margin-bottom: 10px;
     }
-
+    
 }
 
 @media only screen and (max-width: 550px) {
@@ -336,12 +272,6 @@ img {
     .third-item {
         margin-right: 5px;
     }
-
-    .photo-grid-container {
-        margin-left: 5px;
-    }
-
-    
 
 
 }
