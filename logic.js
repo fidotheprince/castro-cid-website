@@ -1,65 +1,144 @@
 
 const projectsContainer = document.querySelector(".projects");
+const selectablesContainer = document.querySelector(".selectables");
+const bottomBackground = document.querySelector(".bottom-background");
+const secretMenuContainer = document.querySelector(".secret-menu-container");
 const home = window.location.href.endsWith("home.html");
+const selectables = [
+    {
+        parentClass: "selectable",
+        iconClass: "fab lead fa-github-square",
+    },
+    {
+        parentClass: "selectable",
+        iconClass: "fab fa-github-square",
+    },
+    {
+        parentClass: "selectable",
+        iconClass: "fab fa-github-square",
+    },
+    {
+        parentClass: "selectable",
+        iconClass: "fab fa-github-square",   
+    }
+]
 const projects = [
     {
         title: "Grocery Pal",
         image: "images/groceypal.gif",
         projectLink: "https://effulgent-praline-4dbf11.netlify.app/",
-        aboutLink: "list.html",
+        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         codeLink: "http://github.com/fidotheprince/dynamic-shopping-list"
     },
     {
         title: "Hangman App",
         image: "images/groceypal.gif",
         projectLink: "https://fidotheprince.github.io/weather-app/",
-        aboutLink: "hangman.html",
+        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         codeLink: "https://github.com/fidotheprince/hangman"
     },
     {
         title: "Achievable App",
         image: "images/groceypal.gif",
         projectLink: "http://achievable.site/",
-        aboutLink: "achievable.html",
+        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         codeLink: "https://github.com/fidotheprince/achievable"
     }
 ]
-const projectCard = (title, image, projectLink, aboutLink, codeLink) => `
-    <h2 class="project-header">${title}</h2>
+
+const selectableCard = (iconClass) => `<i class="${iconClass}"></i>`;
+
+const generateSelectables = () => {
+    selectables.forEach(({parentClass, iconClass}, index) => {
+        const div = document.createElement("div");
+        const first = index === 0;
+        div.classList.add(parentClass);
+        first && div.classList.add("lead");
+        div.innerHTML = selectableCard(iconClass);
+        selectablesContainer.appendChild(div);
+    })
+
+}
+
+const projectCard = (image, about, projectLink, aboutLink, codeLink) => `
     <div class="image-container">
         <a class="options-link" href="${aboutLink}">
             <img class="project-image" src="${image}">
         </a>
     </div>
+    <div class="project-about">
+        <p class="about-description">${about}</p>
+    </div>
     <div class="project-options">
-        <div class="project-opts" onclick="window.location.href='${aboutLink}'">
-            <a class="options-link" href="${aboutLink}">About</a>
-            <a class="options-link" href="${aboutLink}">
-                <i class="fas fa-project-diagram"></i> 
-            </a>
-        </div>
-        <div class="project-opts" onclick="window.location.href='${projectLink}'">
-            <a class="options-link" href="${projectLink}">Try</a>
+        <div class="project-opts use" onclick="window.location.href='${projectLink}'">
             <a class="options-link" href="${projectLink}">
                 <i class="fas fa-play"></i>
+                <span>Use</span>
             </a>
         </div>
-        <div class="project-opts" onclick="window.location.href='${codeLink}'">
-            <a class="options-link" href="${projectLink}">Code</a>
+        <div class="project-opts code" onclick="window.location.href='${codeLink}'">
             <a class="options-link" href="${codeLink}">
-                <i class="fas fa-code"></i> 
+                <i class="fas fa-code"></i>
+                <span>Code</span> 
             </a>
         </div>
     </div>
 `;
-const generateHomeProjectItems = () => {
-    projects.forEach(({title, image, projectLink, aboutLink, codeLink}, index) => {
+
+const desktopProjectCard = (image, about, projectLink, aboutLink, codeLink) => `
+    <div class="image-container">
+        <a class="options-link" href="${aboutLink}">
+            <img class="project-image" src="${image}">
+        </a>
+    </div>
+    <div class="class="desktop-container">
+    <div class="project-about">
+        <p class="about-description">${about}</p>
+    </div>
+        <div class="project-options">
+            <div class="project-opts use" onclick="window.location.href='${projectLink}'">
+                <a class="options-link" href="${projectLink}">
+                    <i class="fas fa-play"></i>
+                    <span>Use</span>
+                </a>
+            </div>
+            <div class="project-opts code" onclick="window.location.href='${codeLink}'">
+                <a class="options-link" href="${codeLink}">
+                    <i class="fas fa-code"></i>
+                    <span>Code</span> 
+                </a>
+            </div>
+        </div>
+    </div>
+`;
+
+const generateHomeProjectItems = (desktop = false) => {
+    projects.forEach(({image, about, projectLink, aboutLink, codeLink}, index) => {
         let projectNumber = index + 1;
         const div = document.createElement("div");
         div.classList.add("project");
         div.classList.add(`p-${projectNumber}`)
-        div.innerHTML = projectCard(title, image, projectLink, aboutLink, codeLink);
+        div.innerHTML = desktop 
+        ? desktopProjectCard(image, about, projectLink, codeLink) 
+        : projectCard(image, about, projectLink, codeLink);
         projectsContainer.appendChild(div);
     })
 }
-window.onload = () => home && generateHomeProjectItems();
+
+const generateInterface = () => {
+    generateSelectables();
+    generateHomeProjectItems();
+}
+
+let observer = new IntersectionObserver((entries) => {
+    secretMenuContainer.style.display = "none";
+    entries.forEach(entry => {
+        entry.isIntersecting ? 
+        secretMenuContainer.style.display = "block": 
+        secretMenuContainer.style.display = "none";
+    });
+})
+
+window.onload = () => home && generateInterface();
+observer.observe(bottomBackground);
+window.innerWidth > 925 ? generateHomeProjectItems(true) : null;

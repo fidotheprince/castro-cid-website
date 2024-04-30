@@ -14,16 +14,19 @@ body {
 
 .top-background {
     background-image: url('/images/top-bg-mobile.svg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 945px;
+
 }
 
 .bottom-background {
     background-image: url('/images/bottom-bg-mobile.svg');
+}
+
+.top-background, .bottom-background {
     background-size: cover;
-    height: 945px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 45px;
     width: 100%;
 }
 
@@ -47,13 +50,31 @@ h1, h2 {
     font-size: 20px;
 }
 
-.logo, .name, .profession, .description {
+.logo, .name .resume-button-container {
     padding-top: 25px;
 }
 
 .description {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.resume-button {
+    width: 250px;
+    height: 78px;
+    border: 3px solid #00161E;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-download, .resume-button {
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #00161E;
 }
 
 .selectables {
@@ -86,24 +107,119 @@ h1, h2 {
 
 .projects-header {
     padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .project {
     background-color: white;
     border: 2px solid #00161E;
     height: 541px;
+    width: 334px;
     margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.about-description {
+    text-align: left;
+    font-size: 15px;
 }
 
 .project-image {
     object-fit: cover;
-    width: 271px;
-    height: 174px;
+    width: 280px;
+    height: 175px;
+}
+
+.project-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-opts {
+    width: 133px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.use {
+    border: 2px solid #00161E;
+}
+
+.code {
+    margin-left: 10px;
+    border: 2px solid #EA7528;
+}
+
+.footer {
+    height: 318px;
+    width: 100%;
+    background-color: #00161E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-icon, .footer-icon {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.menu-icon, .footer-icon, .signature {
+    color: white;
+}
+
+.secret-menu-container {
+    background: black;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-icon {
+    color: white;
 }
 
 @media (min-width: 925px) {
+    .top-background {
+        background-image: url('/images/top-bg.svg');
+    }
+
+    .bottom-background {
+        background-image: url('/images/bottom-bg.svg');
+    }
+
+    .description {
+        width: 65%;
+    }
+
+    .selectables {
+        width: 50%;
+    }
+
+    .project {
+        width: 977px;
+        height: 336px;
+        flex-direction: row;
+    }
 }
