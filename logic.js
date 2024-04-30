@@ -1,8 +1,6 @@
 
-const photoContainer = document.querySelector(".project-container");
-const menuContainer = document.getElementById("menu-container");
+const projectsContainer = document.querySelector(".projects");
 const home = window.location.href.endsWith("home.html");
-const offSetMenu = menuContainer.offsetTop;
 const projects = [
     {
         title: "Grocery Pal",
@@ -26,12 +24,11 @@ const projects = [
         codeLink: "https://github.com/fidotheprince/achievable"
     }
 ]
-
 const projectCard = (title, image, projectLink, aboutLink, codeLink) => `
     <h2 class="project-header">${title}</h2>
     <div class="image-container">
         <a class="options-link" href="${aboutLink}">
-            <img src="${image}">
+            <img class="project-image" src="${image}">
         </a>
     </div>
     <div class="project-options">
@@ -62,7 +59,7 @@ const generateHomeProjectItems = () => {
         div.classList.add("project");
         div.classList.add(`p-${projectNumber}`)
         div.innerHTML = projectCard(title, image, projectLink, aboutLink, codeLink);
-        photoContainer.appendChild(div);
+        projectsContainer.appendChild(div);
     })
 }
 window.onload = () => home && generateHomeProjectItems();

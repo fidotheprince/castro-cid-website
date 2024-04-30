@@ -13,12 +13,18 @@ body {
 }
 
 .top-background {
-    background-image: url('/images/top-background-8-mobile.jpeg');
-    background-size: cover;
-    height: 750px;
+    background-image: url('/images/top-bg-mobile.svg');
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 945px;
+}
+
+.bottom-background {
+    background-image: url('/images/bottom-bg-mobile.svg');
+    background-size: cover;
+    height: 945px;
+    width: 100%;
 }
 
 .menu {
@@ -76,6 +82,27 @@ h1, h2 {
 .lead {
     background-color: #00161E;
     color: white;
+}
+
+.projects-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.project {
+    background-color: white;
+    border: 2px solid #00161E;
+    height: 541px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.project-image {
+    object-fit: cover;
+    width: 271px;
+    height: 174px;
 }
 
 @media (min-width: 925px) {
