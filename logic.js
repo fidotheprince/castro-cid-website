@@ -1,5 +1,5 @@
 
-const photoContainer = document.querySelector(".photo-grid-container");
+const photoContainer = document.querySelector(".project-container");
 const menuContainer = document.getElementById("menu-container");
 const home = window.location.href.endsWith("home.html");
 const offSetMenu = menuContainer.offsetTop;
@@ -13,58 +13,56 @@ const projects = [
     },
     {
         title: "Hangman App",
-        image: "images/hmPostTwo.jpg",
+        image: "images/groceypal.gif",
         projectLink: "https://fidotheprince.github.io/weather-app/",
         aboutLink: "hangman.html",
         codeLink: "https://github.com/fidotheprince/hangman"
     },
     {
         title: "Achievable App",
-        image: "images/sandTimer.jpg",
+        image: "images/groceypal.gif",
         projectLink: "http://achievable.site/",
         aboutLink: "achievable.html",
         codeLink: "https://github.com/fidotheprince/achievable"
     }
 ]
 
-const projectCard = (title, image, projectLink, aboutLink, codeLink) =>` 
-    <div id="project-header" class="item-in-item">${title}</div>
-    <div id="list-gif" class="item-in-item">
-        <a href="${aboutLink}">
+const projectCard = (title, image, projectLink, aboutLink, codeLink) => `
+    <h2 class="project-header">${title}</h2>
+    <div class="image-container">
+        <a class="options-link" href="${aboutLink}">
             <img src="${image}">
         </a>
     </div>
-    <div id="project-footer" class="item-in-item">
-        <a href="${aboutLink}">
-            <div class="project-opts">
+    <div class="project-options">
+        <div class="project-opts" onclick="window.location.href='${aboutLink}'">
+            <a class="options-link" href="${aboutLink}">About</a>
+            <a class="options-link" href="${aboutLink}">
                 <i class="fas fa-project-diagram"></i> 
-                About
-            </div>
-        </a> 
-        <a href="${projectLink}">
-            <div class="project-opts"><i class="fas fa-play"></i> Demo
+            </a>
         </div>
-        </a>
-        <a href="${codeLink}">
-            <div class="project-opts"><i class="fas fa-code"></i> Code
+        <div class="project-opts" onclick="window.location.href='${projectLink}'">
+            <a class="options-link" href="${projectLink}">Try</a>
+            <a class="options-link" href="${projectLink}">
+                <i class="fas fa-play"></i>
+            </a>
         </div>
-        </a>
+        <div class="project-opts" onclick="window.location.href='${codeLink}'">
+            <a class="options-link" href="${projectLink}">Code</a>
+            <a class="options-link" href="${codeLink}">
+                <i class="fas fa-code"></i> 
+            </a>
+        </div>
+    </div>
 `;
-
-const stickMenu = () => {
-    window.pageYOffset >= offSetMenu 
-    ? menuContainer.classList.add("sticky") 
-    : menuContainer.classList.remove("sticky");
-}
-
 const generateHomeProjectItems = () => {
-    projects.forEach(({title, image, projectLink, aboutLink, codeLink}) => {
+    projects.forEach(({title, image, projectLink, aboutLink, codeLink}, index) => {
+        let projectNumber = index + 1;
         const div = document.createElement("div");
-        div.classList.add("photo-grid-item");
+        div.classList.add("project");
+        div.classList.add(`p-${projectNumber}`)
         div.innerHTML = projectCard(title, image, projectLink, aboutLink, codeLink);
         photoContainer.appendChild(div);
     })
 }
-
-window.onscroll = () => stickMenu();
 window.onload = () => home && generateHomeProjectItems();
