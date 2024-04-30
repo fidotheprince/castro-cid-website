@@ -5,10 +5,77 @@
     src: url('/webfonts/Poppins/Poppins-Regular.ttf') format('truetype');
 }
 
+body {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .top-background {
     background-image: url('/images/top-background-8-mobile.jpeg');
     background-size: cover;
     height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, p {
+    font-family: "Poppins-Regular", sans-serif;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 20px;
+}
+
+.logo, .name, .profession, .description {
+    padding-top: 25px;
+}
+
+.description {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.selectables {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selectable {
+    background-color: white;
+    border: 2px solid #00161E;
+    width: 155px;
+    height: 155px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.fab {
+    font-size: 3.5em;
+}
+
+.lead {
+    background-color: #00161E;
+    color: white;
 }
 
 @media (min-width: 925px) {
