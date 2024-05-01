@@ -37,17 +37,17 @@ const projects = [
     },
     {
         title: "Hangman App",
-        image: "images/groceypal.gif",
-        projectLink: "https://fidotheprince.github.io/weather-app/",
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        codeLink: "https://github.com/fidotheprince/hangman"
+        image: "images/flix.gif",
+        projectLink: "https://effortless-donut-7f22db.netlify.app/",
+        about: `I cloned and improved <span class='title'>Flixx</span>, a movie search and rating website; the original site is from Brad Traversy. Accordingly, the original application had a security vulnerability that exposed API credentials to network clients. To fix this issue, I moved the credentials to a hosted node.js server and made data available through custom API endpoints. I also restructured the application to mimic React component patterns in native JavaScript.`,
+        codeLink: "https://github.com/fidotheprince/flixx"
     },
     {
         title: "Achievable App",
-        image: "images/groceypal.gif",
-        projectLink: "http://achievable.site/",
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        codeLink: "https://github.com/fidotheprince/achievable"
+        image: "images/gear.svg",
+        projectLink: "#projects",
+        about: "Ran out of coffee ;) But no worries, I will be updating this section soon. Stay tuned! I have a cool stripe integration that I'm finishing up some styling on, so please, feel free to check back soon.",
+        codeLink: "#projects"
     }
 ]
 

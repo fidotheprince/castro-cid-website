@@ -301,6 +301,7 @@ h1, h2 {
         padding-bottom: 0px;
         height: 750px;
         justify-content: center;
+        background-repeat: no-repeat;
     }
 
     .hero {
