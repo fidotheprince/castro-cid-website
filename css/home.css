@@ -49,6 +49,17 @@ body {
     align-items: center;
 }
 
+.orange {
+    font-family: "Poppins", sans-serif;
+    color: #EA7528;
+    font-size: 22px;
+}
+
+.thick {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+}
+
 h1, h2, h3, p {
     font-family: "Poppins-Regular", sans-serif;
     text-align: center;
@@ -104,8 +115,20 @@ h1, h2 {
     text-align: center;
 }
 
-.fab {
+.selectable:hover {
+    cursor: pointer;
+    transform: scale(1.1) rotate(-1deg);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: #00161E;
+    color: white;
+}
+
+.fab, .fas {
     font-size: 3.5em;
+}
+
+.fa-download, .fa-play, .fa-code-exception {
+    font-size: 1.2rem;
 }
 
 .lead {
@@ -208,6 +231,10 @@ h1, h2 {
     color: #0077B5;
 }
 
+.fa-code:hover {
+    color: #EA7528;
+}
+
 .footer {
     height: 318px;
     width: 100%;
@@ -221,24 +248,37 @@ h1, h2 {
 
     .top-background {
         background-image: url('/images/top-bg.svg');
-        height: 600px;
-        border: none;
+        padding-bottom: 0px;
+        height: 750px;
+        justify-content: center;
     }
+
+    .hero {
+        padding-top: 0px;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1280px;
+    }
+
 
     .bottom-background {
         background-image: url('/images/bottom-bg.svg');
         border: none;
     }
 
-    .hero {
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 1280px;
-    }
-
     .name, .profession, .description, .resume-button-container {
         width: 75%;
         text-align: left;
+    }
+
+    .resume-button {
+        border: 3px solid #EA7528;
+    }
+
+    .resume-button:hover {
+        cursor: pointer;
+        background-color: #EA7528;
+        border: 3px solid #00161E;
     }
 
     .selectables {

@@ -7,20 +7,24 @@ const secretMenuContainer = document.querySelector(".secret-menu-container");
 const home = window.location.href.endsWith("home.html");
 const selectables = [
     {
+        url: "#projects",
         parentClass: "selectable",
-        iconClass: "fab lead fa-github-square",
+        iconClass: "fas lead fa-code",
     },
     {
+        url: "https://github.com/fidotheprince",
         parentClass: "selectable",
         iconClass: "fab fa-github-square",
     },
     {
+        url: "https://www.linkedin.com/in/alvaro-castro-cid-1160081a5/",
         parentClass: "selectable",
-        iconClass: "fab fa-github-square",
+        iconClass: "fab fa-linkedin",
     },
     {
+        url: "mailto:alvarocastrocid1@gmail.com",
         parentClass: "selectable",
-        iconClass: "fab fa-github-square",   
+        iconClass: "fas fa-envelope",   
     }
 ]
 const projects = [
@@ -56,11 +60,13 @@ const removeCurrentProjects = () => {
 const selectableCard = (iconClass) => `<i class="${iconClass}"></i>`;
 
 const generateSelectables = () => {
-    selectables.forEach(({parentClass, iconClass}, index) => {
+
+    selectables.forEach(({url, parentClass, iconClass}, index) => {
         const div = document.createElement("div");
         const first = index === 0;
         div.classList.add(parentClass);
         first && div.classList.add("lead");
+        div.onclick = () => window.location.href = url;
         div.innerHTML = selectableCard(iconClass);
         selectablesContainer.appendChild(div);
     })
@@ -85,7 +91,7 @@ const projectCard = (image, about, projectLink, aboutLink, codeLink) => `
         </div>
         <div class="project-opts code" onclick="window.location.href='${codeLink}'">
             <a class="options-link" href="${codeLink}">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-code-exception fa-code"></i>
                 <span>Code</span> 
             </a>
         </div>

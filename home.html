@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/home.css">
     <link href="/css/all.min.css" rel="stylesheet">
     <meta property='og:title' content="Alvaro's Portfolio"/>
@@ -36,28 +35,34 @@
                 </li>
                 <li>
                     <a href="/images/alvarocastrocid_resume_2024_Q1.pdf">
-                        <i class="fas footer-icon fa-file"></i>
+                        <i class="fas menu-icon fa-file"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/alvaro-castro-cid-1160081a5/">
-                        <i class="fab footer-icon fa-linkedin"></i>
+                        <i class="fab menu-icon fa-linkedin"></i>
                     </a>
                 </li>
-            </div>
             </div>
         </ul>
     </div>
     <div class="top-background">
         <div class="hero">
             <div class="copy-and-resume-content">
-                <h1 class="name">I am Alvaro Castro Cid</h1>
-                <h2 class="profession">I am a Software Developer</h2>
-                <p class="description">As expected, I like to write code, lead through servitude, and produce results for my team.</p>
+                <h1 class="name">
+                    I am 
+                    <span class="orange">Alvaro Castro Cid</span>
+                </h1>
+                <h2 class="profession">
+                    I am a
+                    <span class="thick">Software Developer</span>
+                </h2>
+                <p class="description">I write code, lead through servitude, and produce results for my team. View my resume below.</p>
                 <div class="resume-button-container">
-                    <button class="resume-button">
+                    <button class="resume-button" onclick="window.location.href = '/images/alvarocastrocid_resume_2024_Q1.pdf'">
                         <i class="fas fa-download"></i>
                         <span>Resume</span>
+                    </button>
                     </button>
                 </div>
             </div>  
@@ -66,7 +71,7 @@
         </div>
     </div>
     <div class="bottom-background">
-        <h3 class="projects-header ph-desktop">Here is some of my work, please enjoy.</h2>
+        <h3 id="projects" class="projects-header ph-desktop">Here is some of my work, please enjoy.</h2>
         <div class="projects"></div> 
     </div>
     <div class="footer">
