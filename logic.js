@@ -32,7 +32,7 @@ const projects = [
         title: "Grocery Pal",
         image: "images/groceypal.gif",
         projectLink: "https://effulgent-praline-4dbf11.netlify.app/",
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        about: `<span class='title'>Grocery Pal</span> allows users to categorize their grocery lists using a Text Model (AI) GPT 3.5 Turbo-infused API I built. This application is perfect for users who frequenct grocery stores and like to stay organized. Accordingly, this application will automatically sort the list by category and display the sorted list to the user.`,
         codeLink: "http://github.com/fidotheprince/dynamic-shopping-list"
     },
     {
@@ -73,9 +73,9 @@ const generateSelectables = () => {
 
 }
 
-const projectCard = (image, about, projectLink, aboutLink, codeLink) => `
+const projectCard = (image, about, projectLink, codeLink) => `
     <div class="image-container">
-        <a class="options-link" href="${aboutLink}">
+        <a class="options-link" href="${about}">
             <img class="project-image" src="${image}">
         </a>
     </div>
@@ -101,6 +101,7 @@ const projectCard = (image, about, projectLink, aboutLink, codeLink) => `
 const generateHomeProjectItems = () => {
     removeCurrentProjects();
     projects.forEach(({image, about, projectLink, codeLink}, index) => {
+        console.log(codeLink)
         let projectNumber = index + 1;
         const div = document.createElement("div");
         div.classList.add("project");
@@ -116,14 +117,4 @@ const generateInterface = () => {
     generateHomeProjectItems();
 }
 
-let observer = new IntersectionObserver((entries) => {
-    secretMenuContainer.style.display = "none";
-    entries.forEach(entry => {
-        entry.isIntersecting ? 
-        secretMenuContainer.style.display = "block": 
-        secretMenuContainer.style.display = "none";
-    });
-})
-
 window.onload = () => generateInterface();
-observer.observe(bottomBackground);

@@ -150,6 +150,12 @@ h1, h2 {
     padding-top: 50px;
 }
 
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
 .project {
     background-color: white;
     border: 3px solid #00161E;
