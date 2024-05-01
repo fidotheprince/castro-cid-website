@@ -79,21 +79,21 @@ const projectCard = (image, about, projectLink, aboutLink, codeLink) => `
             <img class="project-image" src="${image}">
         </a>
     </div>
-    <div class="project-about">
-        <p class="about-description">${about}</p>
-    </div>
-    <div class="project-options">
-        <div class="project-opts use" onclick="window.location.href='${projectLink}'">
-            <a class="options-link" href="${projectLink}">
-                <i class="fas fa-play"></i>
-                <span>Use</span>
-            </a>
+    <div class="options-and-about-container">
+        <div class="project-about">
+            <p class="about-description">${about}</p>
         </div>
-        <div class="project-opts code" onclick="window.location.href='${codeLink}'">
-            <a class="options-link" href="${codeLink}">
-                <i class="fas fa-code-exception fa-code"></i>
-                <span>Code</span> 
-            </a>
+        <div class="project-options">
+            <div class="project-opts use" onclick="window.location.href='${projectLink}'">
+                <a class="options-link" href="${projectLink}">
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>
+            <div class="project-opts code" onclick="window.location.href='${codeLink}'">
+                <a class="options-link" href="${codeLink}">
+                    <i class="fas fa-code-exception fa-code"></i>
+                </a>
+            </div>
         </div>
     </div>
 `;

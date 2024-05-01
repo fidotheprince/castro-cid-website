@@ -101,11 +101,20 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    animation: circular 30s infinite linear;
+}
+
+@keyframes circular {
+    0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    25% { transform: rotate(90deg) translateX(30px) rotate(-90deg); }
+    50% { transform: rotate(180deg) translateX(30px) rotate(-180deg); }
+    75% { transform: rotate(270deg) translateX(30px) rotate(-270deg); }
+    100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
 }
 
 .selectable {
     background-color: white;
-    border: 2px solid #00161E;
+    border: 3px solid #00161E;
     width: 155px;
     height: 155px;
     margin: 10px;
@@ -113,6 +122,7 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
 }
 
 .selectable:hover {
@@ -142,7 +152,7 @@ h1, h2 {
 
 .project {
     background-color: white;
-    border: 2px solid #00161E;
+    border: 3px solid #00161E;
     height: 541px;
     width: 334px;
     margin-top: 25px;
@@ -153,6 +163,12 @@ h1, h2 {
     justify-content: space-evenly;
     padding-left: 25px;
     padding-right: 25px;
+    transition: transform 1s ease-in-out;
+}
+
+.project:hover {
+    transform: translate(-10px, -10px);
+
 }
 
 .about-description {
@@ -164,6 +180,13 @@ h1, h2 {
     object-fit: cover;
     width: 280px;
     height: 175px;
+}
+
+.options-and-about-container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-options {
@@ -181,12 +204,28 @@ h1, h2 {
 }
 
 .use {
-    border: 2px solid #00161E;
+    border: 3px solid #00161E;
 }
 
 .code {
     margin-left: 10px;
-    border: 2px solid #EA7528;
+    border: 3px solid #EA7528;
+}
+
+.use:hover {
+    cursor: pointer;
+    background-color: #00161E;
+    color: white;
+    transform: rotate(5deg) translateX(5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.code:hover {
+    cursor: pointer;
+    background-color: #EA7528;
+    color: white;
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease-in-out;
 }
 
 .menu-icon, .footer-icon, .signature {
@@ -201,6 +240,7 @@ h1, h2 {
     position: sticky;
     top: 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .menu {
@@ -209,6 +249,7 @@ h1, h2 {
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
+
 }
 
 .icons-container {
@@ -233,6 +274,10 @@ h1, h2 {
 
 .fa-code:hover {
     color: #EA7528;
+}
+
+.fa-code-exception:hover {
+    color: white;
 }
 
 .footer {
@@ -285,12 +330,19 @@ h1, h2 {
         margin-top: 0px;
     }
 
+    .projects-header { 
+        padding-top: 25px;
+    }
+
     .ph-mobile {
         display: none;
     }
 
     .ph-desktop {
         display: block;
+        font-size: 30px;
+        font-family: "Poppins", sans-serif;
+        color: white;
     }
 
     .selectables {
@@ -304,14 +356,14 @@ h1, h2 {
     }
 
     .project-image {
-        width: 300px;
-        height: 275px;
+        width: 380px;
+        height: 220px;
     }
 
-    .project-about {
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 50%;
+    .options-and-about-container {
+        height: 365px;
+        justify-content: space-evenly;
+        margin-left: 20px;
     }
 
     .about-description {
@@ -328,11 +380,10 @@ h1, h2 {
 
     .project-options {
         display: flex;
-        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .code {
-        margin-left: 0;
-        margin-top: 10px;
+        margin-left: 10px;
     }
 }
