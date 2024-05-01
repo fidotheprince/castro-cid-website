@@ -1,4 +1,5 @@
 
+const hero = document.querySelector(".hero");
 const projectsContainer = document.querySelector(".projects");
 const selectablesContainer = document.querySelector(".selectables");
 const bottomBackground = document.querySelector(".bottom-background");
@@ -46,6 +47,12 @@ const projects = [
     }
 ]
 
+const removeCurrentProjects = () => {
+    while (projectsContainer.firstChild) {
+        projectsContainer.removeChild(projectsContainer.firstChild);
+    }
+}
+
 const selectableCard = (iconClass) => `<i class="${iconClass}"></i>`;
 
 const generateSelectables = () => {
@@ -85,45 +92,18 @@ const projectCard = (image, about, projectLink, aboutLink, codeLink) => `
     </div>
 `;
 
-const desktopProjectCard = (image, about, projectLink, aboutLink, codeLink) => `
-    <div class="image-container">
-        <a class="options-link" href="${aboutLink}">
-            <img class="project-image" src="${image}">
-        </a>
-    </div>
-    <div class="class="desktop-container">
-    <div class="project-about">
-        <p class="about-description">${about}</p>
-    </div>
-        <div class="project-options">
-            <div class="project-opts use" onclick="window.location.href='${projectLink}'">
-                <a class="options-link" href="${projectLink}">
-                    <i class="fas fa-play"></i>
-                    <span>Use</span>
-                </a>
-            </div>
-            <div class="project-opts code" onclick="window.location.href='${codeLink}'">
-                <a class="options-link" href="${codeLink}">
-                    <i class="fas fa-code"></i>
-                    <span>Code</span> 
-                </a>
-            </div>
-        </div>
-    </div>
-`;
-
-const generateHomeProjectItems = (desktop = false) => {
-    projects.forEach(({image, about, projectLink, aboutLink, codeLink}, index) => {
+const generateHomeProjectItems = () => {
+    removeCurrentProjects();
+    projects.forEach(({image, about, projectLink, codeLink}, index) => {
         let projectNumber = index + 1;
         const div = document.createElement("div");
         div.classList.add("project");
         div.classList.add(`p-${projectNumber}`)
-        div.innerHTML = desktop 
-        ? desktopProjectCard(image, about, projectLink, codeLink) 
-        : projectCard(image, about, projectLink, codeLink);
+        div.innerHTML = projectCard(image, about, projectLink, codeLink);
         projectsContainer.appendChild(div);
     })
 }
+
 
 const generateInterface = () => {
     generateSelectables();
@@ -139,6 +119,5 @@ let observer = new IntersectionObserver((entries) => {
     });
 })
 
-window.onload = () => home && generateInterface();
+window.onload = () => generateInterface();
 observer.observe(bottomBackground);
-window.innerWidth > 925 ? generateHomeProjectItems(true) : null;
