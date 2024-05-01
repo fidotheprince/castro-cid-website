@@ -6,7 +6,6 @@
 }
 
 body {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +13,10 @@ body {
 
 .top-background {
     background-image: url('/images/top-bg-mobile.svg');
+}
 
+.bottom-background {
+    background-image: url('/images/bottom-bg-mobile.svg');
 }
 
 .ph-mobile {
@@ -23,10 +25,6 @@ body {
 
 .ph-desktop {
     display: none;
-}
-
-.bottom-background {
-    background-image: url('/images/bottom-bg-mobile.svg');
 }
 
 .top-background, .bottom-background {
@@ -44,6 +42,7 @@ body {
 }
 
 .hero {
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,13 +214,23 @@ h1, h2 {
 }
 
 @media (min-width: 925px) {
+
+    .menu-desktop {
+        padding: 25px;
+    }
+
+    .logo {
+        padding-top: 0px;
+    }
+
     .top-background {
         background-image: url('/images/top-bg.svg');
-        border: 1px solid blue;
+        border: none;
     }
 
     .bottom-background {
         background-image: url('/images/bottom-bg.svg');
+        border: none;
     }
 
     .hero {
@@ -230,28 +239,21 @@ h1, h2 {
         max-width: 1280px;
     }
 
-    .copy-and-resume-content {
-        max-width: 525px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .name, .profession, .description {
-        width: 100%;
+    .name, .profession, .description, .resume-button-container {
+        width: 75%;
         text-align: left;
     }
-    
+
+    .selectables {
+        margin-top: 0px;
+    }
+
     .ph-mobile {
         display: none;
     }
 
     .ph-desktop {
         display: block;
-    }
-
-    .description {
-        width: 65%;
     }
 
     .selectables {
