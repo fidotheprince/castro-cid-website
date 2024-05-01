@@ -113,7 +113,6 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
 }
 
 .selectable:hover {
@@ -169,8 +168,8 @@ h1, h2 {
 }
 
 .about-description {
-    text-align: left;
-    font-size: 15px;
+    text-align: center;
+    font-size: 12px;
 }
 
 .project-image {
@@ -382,6 +381,7 @@ h1, h2 {
 
     .about-description {
         font-size: 15px;
+        text-align: left;
     }
 
     .desktop-container{
