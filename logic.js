@@ -29,6 +29,13 @@ const selectables = [
 ]
 const projects = [
     {
+        title: "Secure Swift",
+        image: "images/sscart.gif",
+        projectLink: "https://secure-swift-shoppers-cart.netlify.app/",
+        about: "<span class='title'>Secure Swift</span> brings together the functionality of a modern e-commerce shopping cart, via stripe integration, and it also implements a beautiful user interface that targets a specific niche audience. The application is a great balance of form and function and build through a collaboration of developers.",
+        codeLink: "https://github.com/grantGCode/Shopping-Cart-Application-Frontend"
+    },
+    {
         title: "Grocery Pal",
         image: "images/groceypal.gif",
         projectLink: "https://effulgent-praline-4dbf11.netlify.app/",
@@ -36,18 +43,11 @@ const projects = [
         codeLink: "http://github.com/fidotheprince/dynamic-shopping-list"
     },
     {
-        title: "Hangman App",
+        title: "Flixx",
         image: "images/flix.gif",
         projectLink: "https://effortless-donut-7f22db.netlify.app/",
         about: `I cloned and improved <span class='title'>Flixx</span>, a movie search and rating website; the original site is from Brad Traversy. Accordingly, the original application had a security vulnerability that exposed API credentials to network clients. To fix this issue, I moved the credentials to a hosted node.js server and made data available through custom API endpoints. I also restructured the application to mimic React component patterns in native JavaScript.`,
         codeLink: "https://github.com/fidotheprince/flixx"
-    },
-    {
-        title: "Achievable App",
-        image: "images/gear.svg",
-        projectLink: "#projects",
-        about: "Ran out of coffee ;) But no worries, I will be updating this section soon. Stay tuned! I have a cool stripe integration that I'm finishing up some styling on, so please, feel free to check back soon.",
-        codeLink: "#projects"
     }
 ]
 
