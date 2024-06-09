@@ -12,22 +12,25 @@ body {
 }
 
 .top-background {
-    background-image: url('/images/top-bg-mobile.svg');
+    background-image: url('/images/dove.svg');    
+    background-repeat: repeat;
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.middle-background {
+    background-image: url('/images/middle-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .bottom-background {
-    background-image: url('/images/bottom-bg-mobile.svg');
+    background-color: #00161E;
 }
 
-.ph-mobile {
-    display: block;
-}
 
-.ph-desktop {
-    display: none;
-}
-
-.top-background, .bottom-background {
+.top-background, .middle-background, .bottom-background {
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -51,7 +54,7 @@ body {
 
 .orange {
     font-family: "Poppins", sans-serif;
-    color: #EA7528;
+    color: #E75700;
     font-size: 22px;
 }
 
@@ -60,7 +63,7 @@ body {
     font-size: 22px;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     font-family: "Poppins-Regular", sans-serif;
     text-align: center;
 }
@@ -138,12 +141,34 @@ h1, h2 {
 
 .projects-header {
     padding-top: 50px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    color: white;
 }
 
 .title {
     font-family: "Poppins", sans-serif;
     font-weight: bolder;
     font-size: 17px;
+}
+
+.middle-background {
+    height: 750px;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+h4, .quote-credit{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
 }
 
 .project {
@@ -159,12 +184,12 @@ h1, h2 {
     justify-content: space-evenly;
     padding-left: 25px;
     padding-right: 25px;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, border 2s ease-in-out;
 }
 
 .project:hover {
     transform: translate(-10px, -10px);
-
+    border: 3px solid #EA7000;
 }
 
 .about-description {
@@ -296,7 +321,6 @@ h1, h2 {
 @media (min-width: 925px) {
 
     .top-background {
-        background-image: url('/images/top-bg.svg');
         padding-bottom: 0px;
         height: 750px;
         justify-content: center;
@@ -310,9 +334,25 @@ h1, h2 {
         max-width: 1280px;
     }
 
-    .bottom-background {
-        background-image: url('/images/bottom-bg.svg');
-        border: none;
+    .middle-background {
+        height: 750px;
+        padding-bottom: 0px;
+    }
+
+    .quote-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%;
+        width: 95%;
+    }
+
+
+    h4, .quote-credit{
+        font-size: 30px;
+        width: 50%;
+        text-align: left;
     }
 
     .name, .profession, .description, .resume-button-container {
@@ -321,12 +361,13 @@ h1, h2 {
     }
 
     .resume-button {
-        border: 3px solid #EA7528;
+        border: 3px solid #EA7000;
     }
 
     .resume-button:hover {
         cursor: pointer;
-        background-color: #EA7528;
+        background-color: #EA7000;
+        color: white;
         border: 3px solid #00161E;
     }
 
@@ -335,18 +376,8 @@ h1, h2 {
     }
 
     .projects-header { 
-        padding-top: 25px;
-    }
-
-    .ph-mobile {
-        display: none;
-    }
-
-    .ph-desktop {
-        display: block;
         font-size: 30px;
-        font-family: "Poppins", sans-serif;
-        color: white;
+        padding-top: 25px;
     }
 
     .selectables {
@@ -399,5 +430,11 @@ h1, h2 {
 
     .code {
         margin-left: 10px;
+    }
+}
+
+@media (min-width: 1290px){
+    .quote-content {
+        width: 50%;
     }
 }

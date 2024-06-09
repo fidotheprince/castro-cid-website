@@ -30,10 +30,17 @@ const selectables = [
 const projects = [
     {
         title: "Secure Swift",
-        image: "images/sscart.gif",
+        image: "images/sscart.png",
         projectLink: "https://secure-swift-shoppers-cart.netlify.app/",
         about: "<span class='title'>Secure Swift</span> brings together the functionality of a modern e-commerce shopping cart, via stripe integration, and it also implements a beautiful user interface that targets a specific niche audience. The application is a great balance of form and function and build through a collaboration of developers.",
         codeLink: "https://github.com/grantGCode/Shopping-Cart-Application-Frontend"
+    },
+    {
+        title: "Fundamental Web Design",
+        image: "images/fundemental-webdesign.png",
+        projectLink: "https://fundemental-web-design.vercel.app/",
+        about: `<span class='title'>Fundamental Web Design</span> is conceptualized Figma, and built in Next JS this project is a reflection of the two technologies I've grown the most fond of in my years as a professional developer.`,
+        codeLink: "https://github.com/grantGCode/Fundamental-Web-Design-Landing-Pagee"
     },
     {
         title: "Grocery Pal",
