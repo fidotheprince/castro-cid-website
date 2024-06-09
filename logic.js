@@ -29,6 +29,13 @@ const selectables = [
 ]
 const projects = [
     {
+        title: "Fundamental Web Design",
+        image: "images/fundemental-webdesign.gif",
+        projectLink: "https://fundemental-web-design.vercel.app/",
+        about: `<span class='title'>Fundamental Web Design</span> is conceptualized Figma, and built in Next JS this project is a reflection of the two technologies I've grown the most fond of in my years as a professional developer.`,
+        codeLink: "https://github.com/grantGCode/Fundamental-Web-Design-Landing-Pagee"
+    },
+    {
         title: "Secure Swift",
         image: "images/sscart.gif",
         projectLink: "https://secure-swift-shoppers-cart.netlify.app/",
