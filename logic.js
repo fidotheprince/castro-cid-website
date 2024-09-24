@@ -29,6 +29,13 @@ const selectables = [
 ]
 const projects = [
     {
+        title: "1800 Accountant",
+        image: "images/1800accountant.png",
+        projectLink: "https://1800accountant.com/",
+        about: "<span class='title'>1800 Accountant</span> is a website that connects small business owners to accountants. The website is built with React and Next JS, and it is a great example of a modern website that is both functional and visually appealing.",
+        codeLink: "#"
+    },
+    {
         title: "Secure Swift",
         image: "images/sscart.png",
         projectLink: "https://secure-swift-shoppers-cart.netlify.app/",
