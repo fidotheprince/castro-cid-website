@@ -33,7 +33,6 @@ const projects = [
         image: "images/1800accountant.png",
         projectLink: "https://1800accountant.com/",
         about: "<span class='title'>1800 Accountant</span> is a website that connects small business owners to accountants. The website is built with React and Next JS, and it is a great example of a modern website that is both functional and visually appealing.",
-        codeLink: "#"
     },
     {
         title: "Secure Swift",
@@ -103,11 +102,16 @@ const projectCard = (image, about, projectLink, codeLink) => `
                     <i class="fas fa-play"></i>
                 </a>
             </div>
-            <div class="project-opts code" onclick="window.location.href='${codeLink}'">
-                <a class="options-link" href="${codeLink}">
-                    <i class="fas fa-code-exception fa-code"></i>
-                </a>
-            </div>
+            ${codeLink ? 
+                 `
+                    <div class="project-opts code" onclick="window.location.href='${codeLink}'">
+                        <a class="options-link" href="${codeLink}">
+                            <i class="fas fa-code-exception fa-code"></i>
+                        </a>
+                    </div>
+                 `
+                :``
+            }
         </div>
     </div>
 `;
